@@ -1,0 +1,4 @@
+*.pyc
+.env
+.opensql_env
+/dev_datasets_all

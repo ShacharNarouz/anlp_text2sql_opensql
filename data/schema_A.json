@@ -1,0 +1,611 @@
+{
+    "california_schools": {
+        "frpm": {
+            "CDSCode": "integer, , , PRIMARY KEY",
+            "Academic Year": "text, , ",
+            "County Code": "text, , ",
+            "District Code": "text, , ",
+            "School Code": "integer, , ",
+            "County Name": "text, (County Code), ",
+            "District Name": "text, , ",
+            "School Name": "text, (School Name), ",
+            "District Type": "text, , ",
+            "School Type": "text, , ",
+            "Educational Option Type": "text, , ",
+            "NSLP Provision Status": "text, , ",
+            "Charter School (Y/N)": "text, , (1, 0)",
+            "Charter School Number": "integer, , ",
+            "Charter Funding Type": "text, , ",
+            "IRC": "text, , (1, 0)",
+            "Low Grade": "integer, , ",
+            "High Grade": "text, , ",
+            "Enrollment (K-12)": "text, , ",
+            "Free Meal Count (K-12)": "real, , ",
+            "Percent (%) Eligible Free (K-12)": "real, , ",
+            "FRPM Count (K-12)": "real, (Free or Reduced Price Meal Count (K-12)), ",
+            "Percent (%) Eligible FRPM (K-12)": "real, , ",
+            "Enrollment (Ages 5-17)": "real, , ",
+            "Free Meal Count (Ages 5-17)": "real, , ",
+            "Percent (%) Eligible Free (Ages 5-17)": "real, , ",
+            "FRPM Count (Ages 5-17)": "real, , ",
+            "Percent (%) Eligible FRPM (Ages 5-17)": "real, , ",
+            "2013-14 CALPADS Fall 1 Certification Status": "real, , "
+        },
+        "satscores": {
+            "cds": "integer, (California Department Schools), , PRIMARY KEY",
+            "rtype": "text, , ('D', 'S')",
+            "sname": "text, (school name), ",
+            "dname": "text, (district segment), ",
+            "cname": "text, (county name), ",
+            "enroll12": "text, (enrollment (1st-12nd grade)), ",
+            "NumTstTakr": "integer, (Number of Test Takers in this school), ",
+            "AvgScrRead": "integer, (average scores in Reading), ",
+            "AvgScrMath": "integer, (average scores in Math), ",
+            "AvgScrWrite": "integer, (average scores in writing), ",
+            "NumGE1500": "integer, (Number of Test Takers Whose Total SAT Scores Are Greater or Equal to 1500), "
+        },
+        "schools": {
+            "CDSCode": "integer, , , PRIMARY KEY",
+            "NCESDist": "text, (This field represents the 7-digit National Center for Educational Statistics (NCES) school district identification number. The first 2 digits identify the state and the last 5 digits identify the school district. Combined, they make a unique 7-digit ID for each school district.), ",
+            "NCESSchool": "text, (This field represents the 5-digit NCES school identification number. The NCESSchool combined with the NCESDist form a unique 12-digit ID for each school.), ",
+            "StatusType": "text, (This field identifies the status of the district.), ('Active', 'Closed', 'Merged', 'Pending')",
+            "County": "text, (County name), ",
+            "District": "text, , ",
+            "School": "text, , ",
+            "Street": "text, , ",
+            "StreetAbr": "text, (The abbreviated street address of the school, district, or administrative authorityâs physical location.), ",
+            "City": "text, , ",
+            "Zip": "text, , ",
+            "State": "text, , ",
+            "MailStreet": "text, , ",
+            "MailStrAbr": "text, , ",
+            "MailCity": "text, , ",
+            "MailZip": "text, , ",
+            "MailState": "text, , ",
+            "Phone": "text, , ",
+            "Ext": "text, (The phone number extension of the school, district, or administrative authority.), ",
+            "Website": "text, (The website address of the school, district, or administrative authority.), ",
+            "OpenDate": "text, (The date the school opened.), ",
+            "ClosedDate": "date, (The date the school closed.), ",
+            "Charter": "date, (This field identifies a charter school.), (1, 0)",
+            "CharterNum": "integer, (The charter school number,), ",
+            "FundingType": "text, (Indicates the charter school funding type), ",
+            "DOC": "text, (District Ownership Code), ",
+            "DOCType": "text, (The District Ownership Code Type is the text description of the DOC category.), ",
+            "SOC": "text, (The School Ownership Code is a numeric code used to identify the type of school.), ",
+            "SOCType": "text, (The School Ownership Code Type is the text description of the type of school.), ",
+            "EdOpsCode": "text, (The Education Option Code is a short text description of the type of education offered.), ",
+            "EdOpsName": "text, (Educational Option Name), ",
+            "EILCode": "text, (The Educational Instruction Level Code is a short text description of the institution's type relative to the grade range served.), ",
+            "EILName": "text, (The Educational Instruction Level Name is the long text description of the institutionâs type relative to the grade range served.), ",
+            "GSoffered": "text, (The grade span offered is the lowest grade and the highest grade offered or supported by the school, district, or administrative authority. This field might differ from the grade span served as reported in the most recent certified California Longitudinal Pupil Achievement (CALPADS) Fall 1 data collection.), ",
+            "GSserved": "text, (It is the lowest grade and the highest grade of student enrollment as reported in the most recent certified CALPADS Fall 1 data collection. Only Kâ12 enrollment is reported through CALPADS. This field may differ from the grade span offered.), ",
+            "Virtual": "text, (This field identifies the type of virtual instruction offered by the school. Virtual instruction is instruction in which students and teachers are separated by time and/or location, and interaction occurs via computers and/or telecommunications technologies.), ('P', 'N', 'F')",
+            "Magnet": "text, (This field identifies whether a school is a magnet school and/or provides a magnet program.), (0, 1)",
+            "Latitude": "integer, (The angular distance (expressed in degrees) between the location of the school, district, or administrative authority and the equator measured north to south.), ",
+            "Longitude": "real, (The angular distance (expressed in degrees) between the location of the school, district, or administrative authority and the prime meridian (Greenwich, England) measured from west to east.), ",
+            "AdmFName1": "real, (administrator's first name), ",
+            "AdmLName1": "text, (administrator's last name), ",
+            "AdmEmail1": "text, (administrator's email address), ",
+            "AdmFName2": "text, , ",
+            "AdmLName2": "text, , ",
+            "AdmEmail2": "text, , ",
+            "AdmFName3": "text, , ",
+            "AdmLName3": "text, , ",
+            "AdmEmail3": "text, , ",
+            "LastUpdate": "text, , "
+        },
+        "foreign_keys": [
+            "schools.CDSCode=frpm.CDSCode",
+            "schools.CDSCode=satscores.cds"
+        ]
+    },
+    "debit_card_specializing": {
+        "customers": {
+            "CustomerID": "real, (identification of the customer), , PRIMARY KEY",
+            "Segment": "text, (client segment), ('SME', 'LAM', 'KAM')",
+            "Currency": "text, , ('EUR', 'CZK')"
+        },
+        "gasstations": {
+            "GasStationID": "integer, (Gas Station ID), , PRIMARY KEY",
+            "ChainID": "integer, (Chain ID), ",
+            "Country": "integer, , ('CZE', 'SVK')",
+            "Segment": "text, (chain segment), ('Value for money', 'Premium', 'Other', 'Noname', 'Discount')"
+        },
+        "products": {
+            "ProductID": "integer, (Product ID), , PRIMARY KEY",
+            "Description": "integer, , "
+        },
+        "transactions_1k": {
+            "TransactionID": "text, (Transaction ID), , PRIMARY KEY",
+            "Date": "integer, , ",
+            "Time": "date, , ",
+            "CustomerID": "real, (Customer ID), ",
+            "CardID": "integer, (Card ID), ",
+            "GasStationID": "integer, (Gas Station ID), ",
+            "ProductID": "integer, (Product ID), ",
+            "Amount": "integer, , ",
+            "Price": "integer, , "
+        },
+        "yearmonth": {
+            "CustomerID": "real, (Customer ID), , PRIMARY KEY",
+            "Date": "integer, , , PRIMARY KEY",
+            "Consumption": "text, , "
+        },
+        "foreign_keys": [
+            "customers.CustomerID=yearmonth.CustomerID"
+        ]
+    },
+    "financial": {
+        "account": {
+            "account_id": "integer, (the id of the account), , PRIMARY KEY",
+            "district_id": "text, (location of branch), ",
+            "frequency": "integer, (frequency of the acount), ",
+            "date": "integer, (the creation date of the account), "
+        },
+        "card": {
+            "card_id": "date, (id number of credit card), , PRIMARY KEY",
+            "disp_id": "integer, (disposition id), ",
+            "type": "date, (type of credit card), ('gold', 'classic', 'junior')",
+            "issued": "text, (the date when the credit card issued), "
+        },
+        "client": {
+            "client_id": "integer, (the unique number), , PRIMARY KEY",
+            "gender": "integer, , ('F', 'M')",
+            "birth_date": "text, (birth date), ",
+            "district_id": "text, (location of branch), "
+        },
+        "disp": {
+            "disp_id": "integer, (unique number of identifying this row of record), , PRIMARY KEY",
+            "client_id": "integer, (id number of client), ",
+            "account_id": "integer, (id number of account), ",
+            "type": "date, (type of disposition), ('OWNER', 'DISPONENT')"
+        },
+        "district": {
+            "district_id": "text, (location of branch), , PRIMARY KEY",
+            "A2": "integer, (district_name), ",
+            "A3": "text, (region), ",
+            "A4": "text, , ",
+            "A5": "text, (municipality < district < region), ",
+            "A6": "text, (municipality < district < region), ",
+            "A7": "text, (municipality < district < region), ",
+            "A8": "text, (municipality < district < region), ",
+            "A9": "integer, , ",
+            "A10": "integer, (ratio of urban inhabitants), ",
+            "A11": "real, (average salary), ",
+            "A12": "integer, (unemployment rate 1995), ",
+            "A13": "real, (unemployment rate 1996), ",
+            "A14": "real, (no. of entrepreneurs per 1000 inhabitants), ",
+            "A15": "integer, (no. of committed crimes 1995), ",
+            "A16": "integer, (no. of committed crimes 1996), "
+        },
+        "loan": {
+            "loan_id": "integer, (the id number identifying the loan data), , PRIMARY KEY",
+            "account_id": "integer, (the id number identifying the account), ",
+            "date": "integer, (the date when the loan is approved), ",
+            "amount": "text, (approved amount), ",
+            "duration": "integer, (loan duration), ",
+            "payments": "integer, (monthly payments), ",
+            "status": "real, (repayment status), ('A', 'B', 'D', 'C')"
+        },
+        "order": {
+            "order_id": "text, (identifying the unique order), , PRIMARY KEY",
+            "account_id": "integer, (id number of account), ",
+            "bank_to": "integer, (bank of the recipient), ",
+            "account_to": "text, (account of the recipient), ",
+            "amount": "text, (debited amount), ",
+            "k_symbol": "integer, (purpose of the payment), ('SIPO', 'UVER', '', 'POJISTNE', 'LEASING')"
+        },
+        "trans": {
+            "trans_id": "text, (transaction id), , PRIMARY KEY",
+            "account_id": "integer, , ",
+            "date": "integer, (date of transaction), ",
+            "type": "date, (+/- transaction), ('PRIJEM', 'VYDAJ', 'VYBER')",
+            "operation": "text, (mode of transaction), ('VKLAD', 'PREVOD Z UCTU', 'PREVOD NA UCET', 'VYBER', 'VYBER KARTOU')",
+            "amount": "text, (amount of money), ",
+            "balance": "integer, (balance after transaction), ",
+            "k_symbol": "integer, , ",
+            "bank": "text, , ",
+            "account": "text, , "
+        },
+        "foreign_keys": [
+            "district.district_id=account.district_id",
+            "disp.disp_id=card.disp_id",
+            "district.district_id=client.district_id",
+            "client.client_id=disp.client_id",
+            "account.account_id=disp.account_id",
+            "account.account_id=loan.account_id",
+            "account.account_id=order.account_id",
+            "account.account_id=trans.account_id"
+        ]
+    },
+    "formula_1": {
+        "circuits": {
+            "circuitId": "integer, (unique identification number of the circuit), , PRIMARY KEY",
+            "circuitRef": "integer, (circuit reference name), ",
+            "name": "integer, , ",
+            "location": "text, , ",
+            "country": "text, , ",
+            "lat": "text, , ",
+            "lng": "real, , ",
+            "alt": "real, , ",
+            "url": "text, , "
+        },
+        "constructors": {
+            "constructorId": "integer, , , PRIMARY KEY",
+            "constructorRef": "integer, , ",
+            "name": "integer, , ",
+            "nationality": "date, , ",
+            "url": "text, , "
+        },
+        "drivers": {
+            "driverId": "integer, , , PRIMARY KEY",
+            "driverRef": "integer, , ",
+            "number": "integer, , ",
+            "code": "integer, , ",
+            "forename": "text, , ",
+            "surname": "text, , ",
+            "dob": "text, , ",
+            "nationality": "date, , ",
+            "url": "text, , "
+        },
+        "seasons": {
+            "year": "integer, , , PRIMARY KEY",
+            "url": "text, , "
+        },
+        "races": {
+            "raceId": "integer, , , PRIMARY KEY",
+            "year": "integer, , ",
+            "round": "integer, , ",
+            "circuitId": "integer, , ",
+            "name": "integer, , ",
+            "date": "text, , ",
+            "time": "integer, , ",
+            "url": "text, , "
+        },
+        "constructorResults": {
+            "constructorResultsId": "text, (constructor Results Id), , PRIMARY KEY",
+            "raceId": "integer, (race id), ",
+            "constructorId": "integer, (constructor id), ",
+            "points": "integer, , ",
+            "status": "integer, , "
+        },
+        "constructorStandings": {
+            "constructorStandingsId": "text, , , PRIMARY KEY",
+            "raceId": "integer, , ",
+            "constructorId": "integer, , ",
+            "points": "integer, (how many points acquired in each race), ",
+            "position": "integer, , ",
+            "positionText": "integer, , ",
+            "wins": "text, , "
+        },
+        "driverStandings": {
+            "driverStandingsId": "integer, , , PRIMARY KEY",
+            "raceId": "integer, , ",
+            "driverId": "integer, , ",
+            "points": "integer, , ",
+            "position": "integer, , ",
+            "positionText": "integer, , ",
+            "wins": "text, (wins), "
+        },
+        "lapTimes": {
+            "raceId": "integer, , , PRIMARY KEY",
+            "driverId": "integer, , , PRIMARY KEY",
+            "lap": "integer, , , PRIMARY KEY",
+            "position": "integer, , ",
+            "time": "integer, , ",
+            "milliseconds": "text, , "
+        },
+        "pitStops": {
+            "raceId": "integer, , , PRIMARY KEY",
+            "driverId": "integer, , , PRIMARY KEY",
+            "stop": "integer, , , PRIMARY KEY",
+            "lap": "integer, , ",
+            "time": "integer, , ",
+            "duration": "text, , ",
+            "milliseconds": "text, , "
+        },
+        "qualifying": {
+            "qualifyId": "integer, , , PRIMARY KEY",
+            "raceId": "integer, , ",
+            "driverId": "integer, , ",
+            "constructorId": "integer, , ",
+            "number": "integer, , ",
+            "position": "integer, , ",
+            "q1": "integer, , ",
+            "q2": "text, , ",
+            "q3": "text, , "
+        },
+        "status": {
+            "statusId": "text, , , PRIMARY KEY",
+            "status": "integer, , "
+        },
+        "results": {
+            "resultId": "text, (the unique identification number identifying race result), , PRIMARY KEY",
+            "raceId": "integer, (the identification number identifying the race), ",
+            "driverId": "integer, , ",
+            "constructorId": "integer, , ",
+            "number": "integer, , ",
+            "grid": "integer, , ",
+            "position": "integer, , ",
+            "positionText": "integer, , ",
+            "positionOrder": "text, , ",
+            "points": "integer, , ",
+            "laps": "real, , ",
+            "time": "integer, , ",
+            "milliseconds": "text, , ",
+            "fastestLap": "integer, , ",
+            "rank": "integer, , ",
+            "fastestLapTime": "integer, , ",
+            "fastestLapSpeed": "text, , ",
+            "statusId": "text, , "
+        },
+        "foreign_keys": [
+            "circuits.circuitId=races.circuitId",
+            "seasons.year=races.year",
+            "constructors.constructorId=constructorResults.constructorId",
+            "races.raceId=constructorResults.raceId",
+            "constructors.constructorId=constructorStandings.constructorId",
+            "races.raceId=constructorStandings.raceId",
+            "drivers.driverId=driverStandings.driverId",
+            "races.raceId=driverStandings.raceId",
+            "drivers.driverId=lapTimes.driverId",
+            "races.raceId=lapTimes.raceId",
+            "drivers.driverId=pitStops.driverId",
+            "races.raceId=pitStops.raceId",
+            "constructors.constructorId=qualifying.constructorId",
+            "drivers.driverId=qualifying.driverId",
+            "races.raceId=qualifying.raceId",
+            "status.statusId=results.statusId",
+            "constructors.constructorId=results.constructorId",
+            "drivers.driverId=results.driverId",
+            "races.raceId=results.raceId"
+        ]
+    },
+    "student_club": {
+        "event": {
+            "event_id": "text, (A unique identifier for the event), , PRIMARY KEY",
+            "event_name": "text, (event name), ",
+            "event_date": "text, (The date the event took place or is scheduled to take place), ",
+            "type": "integer, (The kind of event, such as game, social, election), ",
+            "notes": "text, (A free text field for any notes about the event), ",
+            "location": "text, (Address where the event was held or is to be held or the name of such a location), ",
+            "status": "text, (One of three values indicating if the event is in planning, is opened, or is closed), ('Open', 'Planning', 'Closed')"
+        },
+        "major": {
+            "major_id": "text, (A unique identifier for each major), , PRIMARY KEY",
+            "major_name": "text, (major name), ",
+            "department": "text, (The name of the department that offers the major), ",
+            "college": "text, (The name college that houses the department that offers the major), "
+        },
+        "zip_code": {
+            "zip_code": "text, (The ZIP code itself. A five-digit number identifying a US post office.), , PRIMARY KEY",
+            "type": "integer, (The kind of ZIP code), ('Unique', 'Standard', 'PO Box')",
+            "city": "text, (The city to which the ZIP pertains), ",
+            "county": "text, (The county to which the ZIP pertains), ",
+            "state": "text, (The name of the state to which the ZIP pertains), ",
+            "short_state": "text, (The abbreviation of the state to which the ZIP pertains), "
+        },
+        "attendance": {
+            "link_to_event": "text, (The unique identifier of the event which was attended), , PRIMARY KEY",
+            "link_to_member": "text, (The unique identifier of the member who attended the event), , PRIMARY KEY"
+        },
+        "budget": {
+            "budget_id": "text, (A unique identifier for the budget entry), , PRIMARY KEY",
+            "category": "text, (The area for which the amount is budgeted, such as, advertisement, food, parking), ('Advertisement', 'Food', 'Speaker Gifts', 'Parking', 'Club T-Shirts')",
+            "spent": "text, (The total amount spent in the budgeted category for an event.), ",
+            "remaining": "real, (A value calculated as the amount budgeted minus the amount spent), ",
+            "amount": "text, (The amount budgeted for the specified category and event), ",
+            "event_status": "integer, (the status of the event), ('Closed', 'Open', 'Planning')",
+            "link_to_event": "text, (The unique identifier of the event to which the budget line applies.), "
+        },
+        "expense": {
+            "expense_id": "text, (unique id of income), , PRIMARY KEY",
+            "expense_description": "text, (A textual description of what the money was spend for), ",
+            "expense_date": "text, (The date the expense was incurred), ",
+            "cost": "text, (The dollar amount of the expense), ",
+            "approved": "real, (A true or false value indicating if the expense was approved), ",
+            "link_to_member": "text, (The member who incurred the expense), ",
+            "link_to_budget": "text, (The unique identifier of the record in the Budget table that indicates the expected total expenditure for a given category and event.), "
+        },
+        "income": {
+            "income_id": "text, (A unique identifier for each record of income), , PRIMARY KEY",
+            "date_received": "text, (the date that the fund received), ",
+            "amount": "text, (amount of funds), ",
+            "source": "integer, (A value indicating where the funds come from such as dues, or the annual university allocation), ",
+            "notes": "text, (A free-text value giving any needed details about the receipt of funds), ",
+            "link_to_member": "text, (link to member), "
+        },
+        "member": {
+            "member_id": "text, (unique id of member), , PRIMARY KEY",
+            "first_name": "text, (member's first name), ",
+            "last_name": "text, (member's last name), ",
+            "email": "text, (member's email), ",
+            "position": "text, (The position the member holds in the club), ",
+            "t_shirt_size": "text, (The size of tee shirt that member wants when shirts are ordered), ('Medium', 'X-Large', 'Large', 'Small')",
+            "phone": "text, (The best telephone at which to contact the member), ",
+            "zip": "text, (the zip code of the member's hometown), ",
+            "link_to_major": "integer, (The unique identifier of the major of the member. References the Major table), "
+        },
+        "foreign_keys": [
+            "member.member_id=attendance.link_to_member",
+            "event.event_id=attendance.link_to_event",
+            "event.event_id=budget.link_to_event",
+            "member.member_id=expense.link_to_member",
+            "budget.budget_id=expense.link_to_budget",
+            "member.member_id=income.link_to_member",
+            "zip_code.zip_code=member.zip",
+            "major.major_id=member.link_to_major"
+        ]
+    },
+    "superhero": {
+        "alignment": {
+            "id": "integer, (the unique identifier of the alignment), , PRIMARY KEY",
+            "alignment": "integer, (the alignment of the superhero), ('Good', 'Bad', 'Neutral', 'N/A')"
+        },
+        "attribute": {
+            "id": "integer, (the unique identifier of the attribute), , PRIMARY KEY",
+            "attribute_name": "integer, (the attribute), "
+        },
+        "colour": {
+            "id": "integer, (the unique identifier of the color), , PRIMARY KEY",
+            "colour": "integer, (the color of the superhero's skin/eye/hair/etc), "
+        },
+        "gender": {
+            "id": "integer, (the unique identifier of the gender), (1, 2, 3), PRIMARY KEY",
+            "gender": "integer, (the gender of the superhero), ('Male', 'Female', 'N/A')"
+        },
+        "publisher": {
+            "id": "integer, (the unique identifier of the publisher), , PRIMARY KEY",
+            "publisher_name": "integer, (the name of the publisher), "
+        },
+        "race": {
+            "id": "integer, (the unique identifier of the race), , PRIMARY KEY",
+            "race": "integer, (the race of the superhero), "
+        },
+        "superhero": {
+            "id": "integer, (the unique identifier of the superhero), , PRIMARY KEY",
+            "superhero_name": "integer, (the name of the superhero), ",
+            "full_name": "text, (the full name of the superhero), ",
+            "gender_id": "text, (the id of the superhero's gender), (1, 2, 3)",
+            "eye_colour_id": "integer, (the id of the superhero's eye color), ",
+            "hair_colour_id": "integer, (the id of the superhero's hair color), ",
+            "skin_colour_id": "integer, (the id of the superhero's skin color), ",
+            "race_id": "integer, (the id of the superhero's race), ",
+            "publisher_id": "integer, (the id of the publisher), ",
+            "alignment_id": "integer, (the id of the superhero's alignment), (1, 2, 3)",
+            "height_cm": "integer, (the height of the superhero), ",
+            "weight_kg": "integer, (the weight of the superhero), "
+        },
+        "hero_attribute": {
+            "hero_id": "text, (the id of the hero\nMaps to superhero(id)), ",
+            "attribute_id": "integer, (the id of the attribute\nMaps to attribute(id)), ",
+            "attribute_value": "integer, (the attribute value), "
+        },
+        "superpower": {
+            "id": "integer, (the unique identifier of the superpower), , PRIMARY KEY",
+            "power_name": "integer, (the superpower name), "
+        },
+        "hero_power": {
+            "hero_id": "text, (the id of the hero\nMaps to superhero(id)), ",
+            "power_id": "integer, (the id of the power\nMaps to superpower(id)), "
+        },
+        "foreign_keys": [
+            "colour.id=superhero.skin_colour_id",
+            "race.id=superhero.race_id",
+            "publisher.id=superhero.publisher_id",
+            "colour.id=superhero.hair_colour_id",
+            "gender.id=superhero.gender_id",
+            "colour.id=superhero.eye_colour_id",
+            "alignment.id=superhero.alignment_id",
+            "superhero.id=hero_attribute.hero_id",
+            "attribute.id=hero_attribute.attribute_id",
+            "superpower.id=hero_power.power_id",
+            "superhero.id=hero_power.hero_id"
+        ]
+    },
+    "thrombosis_prediction": {
+        "Examination": {
+            "ID": "text, (identification of the patient), ",
+            "Examination Date": "integer, , ",
+            "aCL IgG": "date, (anti-Cardiolipin antibody (IgG) concentration), ",
+            "aCL IgM": "real, (anti-Cardiolipin antibody (IgM) concentration), ",
+            "ANA": "real, (anti-nucleus antibody concentration), ",
+            "ANA Pattern": "integer, (pattern observed in the sheet of ANA examination), ",
+            "aCL IgA": "text, (anti-Cardiolipin antibody (IgA) concentration), ",
+            "Diagnosis": "text, (disease names), ",
+            "KCT": "text, (measure of degree of coagulation), ('-', '+')",
+            "RVVT": "text, (measure of degree of coagulation), ('-', '+')",
+            "LAC": "text, (measure of degree of coagulation), ('-', '+')",
+            "Symptoms": "text, (other symptoms observed), ",
+            "Thrombosis": "text, (degree of thrombosis), "
+        },
+        "Patient": {
+            "ID": "text, (identification of the patient), , PRIMARY KEY",
+            "SEX": "integer, , ('F', 'M', '')",
+            "Birthday": "text, , ",
+            "Description": "date, (the first date when a patient data was recorded), ",
+            "First Date": "date, (the date when a patient came to the hospital), ",
+            "Admission": "date, (patient was admitted to the hospital (+) or followed at the outpatient clinic (-)), ('+', '-', '', '+(')",
+            "Diagnosis": "text, (disease names), "
+        },
+        "Laboratory": {
+            "ID": "text, (identification of the patient), , PRIMARY KEY",
+            "Date": "integer, (Date of the laboratory tests (YYMMDD)), , PRIMARY KEY",
+            "GOT": "date, (AST glutamic oxaloacetic transaminase), ",
+            "GPT": "integer, (ALT glutamic pyruvic transaminase), ",
+            "LDH": "integer, (lactate dehydrogenase), ",
+            "ALP": "integer, (alkaliphophatase), ",
+            "TP": "integer, (total protein), ",
+            "ALB": "real, (albumin), ",
+            "UA": "real, (uric acid), ",
+            "UN": "real, (urea nitrogen), ",
+            "CRE": "integer, (creatinine), ",
+            "T-BIL": "real, (total bilirubin), ",
+            "T-CHO": "real, (total cholesterol), ",
+            "TG": "integer, (triglyceride), ",
+            "CPK": "integer, (creatinine phosphokinase), ",
+            "GLU": "integer, (blood glucose), ",
+            "WBC": "integer, (White blood cell), ",
+            "RBC": "real, (Red blood cell), ",
+            "HGB": "real, (Hemoglobin), ",
+            "HCT": "real, (Hematoclit), ",
+            "PLT": "real, (platelet), ",
+            "PT": "integer, (prothrombin time), ",
+            "APTT": "real, (activated partial prothrombin time), ",
+            "FG": "integer, (fibrinogen), ",
+            "PIC": "real, , ",
+            "TAT": "integer, , ",
+            "TAT2": "integer, , ",
+            "U-PRO": "integer, (proteinuria), ",
+            "IGG": "text, (Ig G), ",
+            "IGA": "integer, (Ig A), ",
+            "IGM": "integer, (Ig M), ",
+            "CRP": "integer, (C-reactive protein), ",
+            "RA": "text, (Rhuematoid Factor), ('-', '+', '+-', '2+', '7-')",
+            "RF": "text, (RAHA), ",
+            "C3": "text, (complement 3), ",
+            "C4": "integer, (complement 4), ",
+            "RNP": "integer, (anti-ribonuclear protein), ",
+            "SM": "text, (anti-SM), ('0', '1', 'negative', '2', '8')",
+            "SC170": "text, (anti-scl70), ('16', '1', '0', 'negative', '4')",
+            "SSA": "text, (anti-SSA), ",
+            "SSB": "text, (anti-SSB), ",
+            "CENTROMEA": "text, (anti-centromere), ('0', 'negative')",
+            "DNA": "text, (anti-DNA), ",
+            "DNA-II": "text, (anti-DNA), "
+        },
+        "foreign_keys": [
+            "Patient.ID=Examination.ID",
+            "Patient.ID=Laboratory.ID"
+        ]
+    },
+    "toxicology": {
+        "atom": {
+            "atom_id": "text, (the unique id of atoms), , PRIMARY KEY",
+            "molecule_id": "text, (identifying the molecule to which the atom belongs), ",
+            "element": "text, (the element of the toxicology), "
+        },
+        "bond": {
+            "bond_id": "text, (unique id representing bonds), , PRIMARY KEY",
+            "molecule_id": "text, (identifying the molecule in which the bond appears), ",
+            "bond_type": "text, (type of the bond), ('-', '=', '#')"
+        },
+        "connected": {
+            "atom_id": "text, (id of the first atom), , PRIMARY KEY",
+            "atom_id2": "text, (id of the second atom), , PRIMARY KEY",
+            "bond_id": "text, (bond id representing bond between two atoms), "
+        },
+        "molecule": {
+            "molecule_id": "text, (unique id of molecule), , PRIMARY KEY",
+            "label": "text, (whether this molecule is carcinogenic or not), ('+', '-')"
+        },
+        "foreign_keys": [
+            "molecule.molecule_id=atom.molecule_id",
+            "molecule.molecule_id=bond.molecule_id",
+            "bond.bond_id=connected.bond_id",
+            "atom.atom_id=connected.atom_id2",
+            "atom.atom_id=connected.atom_id"
+        ]
+    }
+}

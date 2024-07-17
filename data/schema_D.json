@@ -1,0 +1,611 @@
+{
+    "california_schools": {
+        "frpm": {
+            "CDSCode": "",
+            "Academic Year": "",
+            "County Code": "",
+            "District Code": "",
+            "School Code": "",
+            "County Name": "County Code",
+            "District Name": "",
+            "School Name": "",
+            "District Type": "",
+            "School Type": "",
+            "Educational Option Type": "",
+            "NSLP Provision Status": "",
+            "Charter School (Y/N)": "",
+            "Charter School Number": "",
+            "Charter Funding Type": "",
+            "IRC": "",
+            "Low Grade": "",
+            "High Grade": "",
+            "Enrollment (K-12)": "",
+            "Free Meal Count (K-12)": "",
+            "Percent (%) Eligible Free (K-12)": "",
+            "FRPM Count (K-12)": "Free or Reduced Price Meal Count (K-12)",
+            "Percent (%) Eligible FRPM (K-12)": "",
+            "Enrollment (Ages 5-17)": "",
+            "Free Meal Count (Ages 5-17)": "",
+            "Percent (%) Eligible Free (Ages 5-17)": "",
+            "FRPM Count (Ages 5-17)": "",
+            "Percent (%) Eligible FRPM (Ages 5-17)": "",
+            "2013-14 CALPADS Fall 1 Certification Status": ""
+        },
+        "satscores": {
+            "cds": "California Department Schools",
+            "rtype": "",
+            "sname": "school name",
+            "dname": "district segment",
+            "cname": "county name",
+            "enroll12": "enrollment (1st-12nd grade)",
+            "NumTstTakr": "Number of Test Takers in this school",
+            "AvgScrRead": "average scores in Reading",
+            "AvgScrMath": "average scores in Math",
+            "AvgScrWrite": "average scores in writing",
+            "NumGE1500": "Number of Test Takers Whose Total SAT Scores Are Greater or Equal to 1500"
+        },
+        "schools": {
+            "CDSCode": "",
+            "NCESDist": "This field represents the 7-digit National Center for Educational Statistics (NCES) school district identification number. The first 2 digits identify the state and the last 5 digits identify the school district. Combined, they make a unique 7-digit ID for each school district.",
+            "NCESSchool": "This field represents the 5-digit NCES school identification number. The NCESSchool combined with the NCESDist form a unique 12-digit ID for each school.",
+            "StatusType": "This field identifies the status of the district.",
+            "County": "County name",
+            "District": "",
+            "School": "",
+            "Street": "",
+            "StreetAbr": "The abbreviated street address of the school, district, or administrative authorityâs physical location.",
+            "City": "",
+            "Zip": "",
+            "State": "",
+            "MailStreet": "",
+            "MailStrAbr": "",
+            "MailCity": "",
+            "MailZip": "",
+            "MailState": "",
+            "Phone": "",
+            "Ext": "The phone number extension of the school, district, or administrative authority.",
+            "Website": "The website address of the school, district, or administrative authority.",
+            "OpenDate": "The date the school opened.",
+            "ClosedDate": "The date the school closed.",
+            "Charter": "This field identifies a charter school.",
+            "CharterNum": "The charter school number,",
+            "FundingType": "Indicates the charter school funding type",
+            "DOC": "District Ownership Code",
+            "DOCType": "The District Ownership Code Type is the text description of the DOC category.",
+            "SOC": "The School Ownership Code is a numeric code used to identify the type of school.",
+            "SOCType": "The School Ownership Code Type is the text description of the type of school.",
+            "EdOpsCode": "The Education Option Code is a short text description of the type of education offered.",
+            "EdOpsName": "Educational Option Name",
+            "EILCode": "The Educational Instruction Level Code is a short text description of the institution's type relative to the grade range served.",
+            "EILName": "The Educational Instruction Level Name is the long text description of the institutionâs type relative to the grade range served.",
+            "GSoffered": "The grade span offered is the lowest grade and the highest grade offered or supported by the school, district, or administrative authority. This field might differ from the grade span served as reported in the most recent certified California Longitudinal Pupil Achievement (CALPADS) Fall 1 data collection.",
+            "GSserved": "It is the lowest grade and the highest grade of student enrollment as reported in the most recent certified CALPADS Fall 1 data collection. Only Kâ12 enrollment is reported through CALPADS. This field may differ from the grade span offered.",
+            "Virtual": "This field identifies the type of virtual instruction offered by the school. Virtual instruction is instruction in which students and teachers are separated by time and/or location, and interaction occurs via computers and/or telecommunications technologies.",
+            "Magnet": "This field identifies whether a school is a magnet school and/or provides a magnet program.",
+            "Latitude": "The angular distance (expressed in degrees) between the location of the school, district, or administrative authority and the equator measured north to south.",
+            "Longitude": "The angular distance (expressed in degrees) between the location of the school, district, or administrative authority and the prime meridian (Greenwich, England) measured from west to east.",
+            "AdmFName1": "administrator's first name",
+            "AdmLName1": "administrator's last name",
+            "AdmEmail1": "administrator's email address",
+            "AdmFName2": "",
+            "AdmLName2": "",
+            "AdmEmail2": "",
+            "AdmFName3": "",
+            "AdmLName3": "",
+            "AdmEmail3": "",
+            "LastUpdate": ""
+        },
+        "foreign_keys": [
+            "schools.CDSCode=frpm.CDSCode",
+            "schools.CDSCode=satscores.cds"
+        ]
+    },
+    "debit_card_specializing": {
+        "customers": {
+            "CustomerID": "identification of the customer",
+            "Segment": "client segment",
+            "Currency": ""
+        },
+        "gasstations": {
+            "GasStationID": "Gas Station ID",
+            "ChainID": "Chain ID",
+            "Country": "",
+            "Segment": "chain segment"
+        },
+        "products": {
+            "ProductID": "Product ID",
+            "Description": ""
+        },
+        "transactions_1k": {
+            "TransactionID": "Transaction ID",
+            "Date": "",
+            "Time": "",
+            "CustomerID": "Customer ID",
+            "CardID": "Card ID",
+            "GasStationID": "Gas Station ID",
+            "ProductID": "Product ID",
+            "Amount": "",
+            "Price": ""
+        },
+        "yearmonth": {
+            "CustomerID": "Customer ID",
+            "Date": "",
+            "Consumption": ""
+        },
+        "foreign_keys": [
+            "customers.CustomerID=yearmonth.CustomerID"
+        ]
+    },
+    "financial": {
+        "account": {
+            "account_id": "the id of the account",
+            "district_id": "location of branch",
+            "frequency": "frequency of the acount",
+            "date": "the creation date of the account"
+        },
+        "card": {
+            "card_id": "id number of credit card",
+            "disp_id": "disposition id",
+            "type": "type of credit card",
+            "issued": "the date when the credit card issued"
+        },
+        "client": {
+            "client_id": "the unique number",
+            "gender": "",
+            "birth_date": "birth date",
+            "district_id": "location of branch"
+        },
+        "disp": {
+            "disp_id": "unique number of identifying this row of record",
+            "client_id": "id number of client",
+            "account_id": "id number of account",
+            "type": "type of disposition"
+        },
+        "district": {
+            "district_id": "location of branch",
+            "A2": "district_name",
+            "A3": "region",
+            "A4": "",
+            "A5": "municipality < district < region",
+            "A6": "municipality < district < region",
+            "A7": "municipality < district < region",
+            "A8": "municipality < district < region",
+            "A9": "",
+            "A10": "ratio of urban inhabitants",
+            "A11": "average salary",
+            "A12": "unemployment rate 1995",
+            "A13": "unemployment rate 1996",
+            "A14": "no. of entrepreneurs per 1000 inhabitants",
+            "A15": "no. of committed crimes 1995",
+            "A16": "no. of committed crimes 1996"
+        },
+        "loan": {
+            "loan_id": "the id number identifying the loan data",
+            "account_id": "the id number identifying the account",
+            "date": "the date when the loan is approved",
+            "amount": "approved amount",
+            "duration": "loan duration",
+            "payments": "monthly payments",
+            "status": "repayment status"
+        },
+        "order": {
+            "order_id": "identifying the unique order",
+            "account_id": "id number of account",
+            "bank_to": "bank of the recipient",
+            "account_to": "account of the recipient",
+            "amount": "debited amount",
+            "k_symbol": "purpose of the payment"
+        },
+        "trans": {
+            "trans_id": "transaction id",
+            "account_id": "",
+            "date": "date of transaction",
+            "type": "+/- transaction",
+            "operation": "mode of transaction",
+            "amount": "amount of money",
+            "balance": "balance after transaction",
+            "k_symbol": "",
+            "bank": "",
+            "account": ""
+        },
+        "foreign_keys": [
+            "district.district_id=account.district_id",
+            "disp.disp_id=card.disp_id",
+            "district.district_id=client.district_id",
+            "client.client_id=disp.client_id",
+            "account.account_id=disp.account_id",
+            "account.account_id=loan.account_id",
+            "account.account_id=order.account_id",
+            "account.account_id=trans.account_id"
+        ]
+    },
+    "formula_1": {
+        "circuits": {
+            "circuitId": "unique identification number of the circuit",
+            "circuitRef": "circuit reference name",
+            "name": "",
+            "location": "",
+            "country": "",
+            "lat": "",
+            "lng": "",
+            "alt": "",
+            "url": ""
+        },
+        "constructors": {
+            "constructorId": "",
+            "constructorRef": "",
+            "name": "",
+            "nationality": "",
+            "url": ""
+        },
+        "drivers": {
+            "driverId": "",
+            "driverRef": "",
+            "number": "",
+            "code": "",
+            "forename": "",
+            "surname": "",
+            "dob": "",
+            "nationality": "",
+            "url": ""
+        },
+        "seasons": {
+            "year": "",
+            "url": ""
+        },
+        "races": {
+            "raceId": "",
+            "year": "",
+            "round": "",
+            "circuitId": "",
+            "name": "",
+            "date": "",
+            "time": "",
+            "url": ""
+        },
+        "constructorResults": {
+            "constructorResultsId": "constructor Results Id",
+            "raceId": "race id",
+            "constructorId": "constructor id",
+            "points": "",
+            "status": ""
+        },
+        "constructorStandings": {
+            "constructorStandingsId": "",
+            "raceId": "",
+            "constructorId": "",
+            "points": "how many points acquired in each race",
+            "position": "",
+            "positionText": "",
+            "wins": ""
+        },
+        "driverStandings": {
+            "driverStandingsId": "",
+            "raceId": "",
+            "driverId": "",
+            "points": "",
+            "position": "",
+            "positionText": "",
+            "wins": ""
+        },
+        "lapTimes": {
+            "raceId": "",
+            "driverId": "",
+            "lap": "",
+            "position": "",
+            "time": "",
+            "milliseconds": ""
+        },
+        "pitStops": {
+            "raceId": "",
+            "driverId": "",
+            "stop": "",
+            "lap": "",
+            "time": "",
+            "duration": "",
+            "milliseconds": ""
+        },
+        "qualifying": {
+            "qualifyId": "",
+            "raceId": "",
+            "driverId": "",
+            "constructorId": "",
+            "number": "",
+            "position": "",
+            "q1": "",
+            "q2": "",
+            "q3": ""
+        },
+        "status": {
+            "statusId": "",
+            "status": ""
+        },
+        "results": {
+            "resultId": "the unique identification number identifying race result",
+            "raceId": "the identification number identifying the race",
+            "driverId": "",
+            "constructorId": "",
+            "number": "",
+            "grid": "",
+            "position": "",
+            "positionText": "",
+            "positionOrder": "",
+            "points": "",
+            "laps": "",
+            "time": "",
+            "milliseconds": "",
+            "fastestLap": "",
+            "rank": "",
+            "fastestLapTime": "",
+            "fastestLapSpeed": "",
+            "statusId": ""
+        },
+        "foreign_keys": [
+            "circuits.circuitId=races.circuitId",
+            "seasons.year=races.year",
+            "constructors.constructorId=constructorResults.constructorId",
+            "races.raceId=constructorResults.raceId",
+            "constructors.constructorId=constructorStandings.constructorId",
+            "races.raceId=constructorStandings.raceId",
+            "drivers.driverId=driverStandings.driverId",
+            "races.raceId=driverStandings.raceId",
+            "drivers.driverId=lapTimes.driverId",
+            "races.raceId=lapTimes.raceId",
+            "drivers.driverId=pitStops.driverId",
+            "races.raceId=pitStops.raceId",
+            "constructors.constructorId=qualifying.constructorId",
+            "drivers.driverId=qualifying.driverId",
+            "races.raceId=qualifying.raceId",
+            "status.statusId=results.statusId",
+            "constructors.constructorId=results.constructorId",
+            "drivers.driverId=results.driverId",
+            "races.raceId=results.raceId"
+        ]
+    },
+    "student_club": {
+        "event": {
+            "event_id": "A unique identifier for the event",
+            "event_name": "event name",
+            "event_date": "The date the event took place or is scheduled to take place",
+            "type": "The kind of event, such as game, social, election",
+            "notes": "A free text field for any notes about the event",
+            "location": "Address where the event was held or is to be held or the name of such a location",
+            "status": "One of three values indicating if the event is in planning, is opened, or is closed"
+        },
+        "major": {
+            "major_id": "A unique identifier for each major",
+            "major_name": "major name",
+            "department": "The name of the department that offers the major",
+            "college": "The name college that houses the department that offers the major"
+        },
+        "zip_code": {
+            "zip_code": "The ZIP code itself. A five-digit number identifying a US post office.",
+            "type": "The kind of ZIP code",
+            "city": "The city to which the ZIP pertains",
+            "county": "The county to which the ZIP pertains",
+            "state": "The name of the state to which the ZIP pertains",
+            "short_state": "The abbreviation of the state to which the ZIP pertains"
+        },
+        "attendance": {
+            "link_to_event": "The unique identifier of the event which was attended",
+            "link_to_member": "The unique identifier of the member who attended the event"
+        },
+        "budget": {
+            "budget_id": "A unique identifier for the budget entry",
+            "category": "The area for which the amount is budgeted, such as, advertisement, food, parking",
+            "spent": "The total amount spent in the budgeted category for an event.",
+            "remaining": "A value calculated as the amount budgeted minus the amount spent",
+            "amount": "The amount budgeted for the specified category and event",
+            "event_status": "the status of the event",
+            "link_to_event": "The unique identifier of the event to which the budget line applies."
+        },
+        "expense": {
+            "expense_id": "unique id of income",
+            "expense_description": "A textual description of what the money was spend for",
+            "expense_date": "The date the expense was incurred",
+            "cost": "The dollar amount of the expense",
+            "approved": "A true or false value indicating if the expense was approved",
+            "link_to_member": "The member who incurred the expense",
+            "link_to_budget": "The unique identifier of the record in the Budget table that indicates the expected total expenditure for a given category and event."
+        },
+        "income": {
+            "income_id": "A unique identifier for each record of income",
+            "date_received": "the date that the fund received",
+            "amount": "amount of funds",
+            "source": "A value indicating where the funds come from such as dues, or the annual university allocation",
+            "notes": "A free-text value giving any needed details about the receipt of funds",
+            "link_to_member": "link to member"
+        },
+        "member": {
+            "member_id": "unique id of member",
+            "first_name": "member's first name",
+            "last_name": "member's last name",
+            "email": "member's email",
+            "position": "The position the member holds in the club",
+            "t_shirt_size": "The size of tee shirt that member wants when shirts are ordered",
+            "phone": "The best telephone at which to contact the member",
+            "zip": "the zip code of the member's hometown",
+            "link_to_major": "The unique identifier of the major of the member. References the Major table"
+        },
+        "foreign_keys": [
+            "member.member_id=attendance.link_to_member",
+            "event.event_id=attendance.link_to_event",
+            "event.event_id=budget.link_to_event",
+            "member.member_id=expense.link_to_member",
+            "budget.budget_id=expense.link_to_budget",
+            "member.member_id=income.link_to_member",
+            "zip_code.zip_code=member.zip",
+            "major.major_id=member.link_to_major"
+        ]
+    },
+    "superhero": {
+        "alignment": {
+            "id": "the unique identifier of the alignment",
+            "alignment": "the alignment of the superhero"
+        },
+        "attribute": {
+            "id": "the unique identifier of the attribute",
+            "attribute_name": "the attribute"
+        },
+        "colour": {
+            "id": "the unique identifier of the color",
+            "colour": "the color of the superhero's skin/eye/hair/etc"
+        },
+        "gender": {
+            "id": "the unique identifier of the gender",
+            "gender": "the gender of the superhero"
+        },
+        "publisher": {
+            "id": "the unique identifier of the publisher",
+            "publisher_name": "the name of the publisher"
+        },
+        "race": {
+            "id": "the unique identifier of the race",
+            "race": "the race of the superhero"
+        },
+        "superhero": {
+            "id": "the unique identifier of the superhero",
+            "superhero_name": "the name of the superhero",
+            "full_name": "the full name of the superhero",
+            "gender_id": "the id of the superhero's gender",
+            "eye_colour_id": "the id of the superhero's eye color",
+            "hair_colour_id": "the id of the superhero's hair color",
+            "skin_colour_id": "the id of the superhero's skin color",
+            "race_id": "the id of the superhero's race",
+            "publisher_id": "the id of the publisher",
+            "alignment_id": "the id of the superhero's alignment",
+            "height_cm": "the height of the superhero",
+            "weight_kg": "the weight of the superhero"
+        },
+        "hero_attribute": {
+            "hero_id": "the id of the hero\nMaps to superhero(id)",
+            "attribute_id": "the id of the attribute\nMaps to attribute(id)",
+            "attribute_value": "the attribute value"
+        },
+        "superpower": {
+            "id": "the unique identifier of the superpower",
+            "power_name": "the superpower name"
+        },
+        "hero_power": {
+            "hero_id": "the id of the hero\nMaps to superhero(id)",
+            "power_id": "the id of the power\nMaps to superpower(id)"
+        },
+        "foreign_keys": [
+            "colour.id=superhero.skin_colour_id",
+            "race.id=superhero.race_id",
+            "publisher.id=superhero.publisher_id",
+            "colour.id=superhero.hair_colour_id",
+            "gender.id=superhero.gender_id",
+            "colour.id=superhero.eye_colour_id",
+            "alignment.id=superhero.alignment_id",
+            "superhero.id=hero_attribute.hero_id",
+            "attribute.id=hero_attribute.attribute_id",
+            "superpower.id=hero_power.power_id",
+            "superhero.id=hero_power.hero_id"
+        ]
+    },
+    "thrombosis_prediction": {
+        "Examination": {
+            "ID": "identification of the patient",
+            "Examination Date": "",
+            "aCL IgG": "anti-Cardiolipin antibody (IgG) concentration",
+            "aCL IgM": "anti-Cardiolipin antibody (IgM) concentration",
+            "ANA": "anti-nucleus antibody concentration",
+            "ANA Pattern": "pattern observed in the sheet of ANA examination",
+            "aCL IgA": "anti-Cardiolipin antibody (IgA) concentration",
+            "Diagnosis": "disease names",
+            "KCT": "measure of degree of coagulation",
+            "RVVT": "measure of degree of coagulation",
+            "LAC": "measure of degree of coagulation",
+            "Symptoms": "other symptoms observed",
+            "Thrombosis": "degree of thrombosis"
+        },
+        "Patient": {
+            "ID": "identification of the patient",
+            "SEX": "",
+            "Birthday": "",
+            "Description": "the first date when a patient data was recorded",
+            "First Date": "the date when a patient came to the hospital",
+            "Admission": "patient was admitted to the hospital (+) or followed at the outpatient clinic (-)",
+            "Diagnosis": "disease names"
+        },
+        "Laboratory": {
+            "ID": "identification of the patient",
+            "Date": "Date of the laboratory tests (YYMMDD)",
+            "GOT": "AST glutamic oxaloacetic transaminase",
+            "GPT": "ALT glutamic pyruvic transaminase",
+            "LDH": "lactate dehydrogenase",
+            "ALP": "alkaliphophatase",
+            "TP": "total protein",
+            "ALB": "albumin",
+            "UA": "uric acid",
+            "UN": "urea nitrogen",
+            "CRE": "creatinine",
+            "T-BIL": "total bilirubin",
+            "T-CHO": "total cholesterol",
+            "TG": "triglyceride",
+            "CPK": "creatinine phosphokinase",
+            "GLU": "blood glucose",
+            "WBC": "White blood cell",
+            "RBC": "Red blood cell",
+            "HGB": "Hemoglobin",
+            "HCT": "Hematoclit",
+            "PLT": "platelet",
+            "PT": "prothrombin time",
+            "APTT": "activated partial prothrombin time",
+            "FG": "fibrinogen",
+            "PIC": "",
+            "TAT": "",
+            "TAT2": "",
+            "U-PRO": "proteinuria",
+            "IGG": "Ig G",
+            "IGA": "Ig A",
+            "IGM": "Ig M",
+            "CRP": "C-reactive protein",
+            "RA": "Rhuematoid Factor",
+            "RF": "RAHA",
+            "C3": "complement 3",
+            "C4": "complement 4",
+            "RNP": "anti-ribonuclear protein",
+            "SM": "anti-SM",
+            "SC170": "anti-scl70",
+            "SSA": "anti-SSA",
+            "SSB": "anti-SSB",
+            "CENTROMEA": "anti-centromere",
+            "DNA": "anti-DNA",
+            "DNA-II": "anti-DNA"
+        },
+        "foreign_keys": [
+            "Patient.ID=Examination.ID",
+            "Patient.ID=Laboratory.ID"
+        ]
+    },
+    "toxicology": {
+        "atom": {
+            "atom_id": "the unique id of atoms",
+            "molecule_id": "identifying the molecule to which the atom belongs",
+            "element": "the element of the toxicology"
+        },
+        "bond": {
+            "bond_id": "unique id representing bonds",
+            "molecule_id": "identifying the molecule in which the bond appears",
+            "bond_type": "type of the bond"
+        },
+        "connected": {
+            "atom_id": "id of the first atom",
+            "atom_id2": "id of the second atom",
+            "bond_id": "bond id representing bond between two atoms"
+        },
+        "molecule": {
+            "molecule_id": "unique id of molecule",
+            "label": "whether this molecule is carcinogenic or not"
+        },
+        "foreign_keys": [
+            "molecule.molecule_id=atom.molecule_id",
+            "molecule.molecule_id=bond.molecule_id",
+            "bond.bond_id=connected.bond_id",
+            "atom.atom_id=connected.atom_id2",
+            "atom.atom_id=connected.atom_id"
+        ]
+    }
+}
